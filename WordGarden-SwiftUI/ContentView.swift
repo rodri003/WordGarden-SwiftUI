@@ -61,7 +61,7 @@ struct ContentView: View {
                         .submitLabel(.done)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.characters)
-                        .onChange(of: guessedLetter) { _ in
+                        .onChange(of: guessedLetter) {_,  _ in
                             guessedLetter = guessedLetter.trimmingCharacters(in: .letters.inverted)
                             guard let lastChar = guessedLetter.last
                             else {
